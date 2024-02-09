@@ -1,0 +1,77 @@
+<!-- <div
+  class="authentication-card-container"
+  fxLayout="column"
+  fxLayoutAlign="center"
+>
+  <mat-card class="authentication-card">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title></mat-card-header
+    >
+    <mat-card-content>
+      <form
+        [formGroup]="registerForm"
+        fxLayout="column"
+        fxLayoutAlign="center stretch"
+      >
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="onSubmit()">
+        Register
+      </button>
+      <button mat-button routerLink="/login" routerLinkActive="active">
+        Already have an account? Login here.
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+<!-- register.component.html -->
+
+<div class="body">
+  <div class="container">
+    <div class="register-form">
+    <div class="header">
+      <h1>Create an account</h1>
+    </div>
+<form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+  <div>
+    <label for="FirstName">First Name</label>
+    <input type="text" placeholder ="Enter your first name" id="FirstName" formControlName="FirstName" required>
+  </div>
+  <div>
+    <label for="LastName">Last Name</label>
+    <input type="text" placeholder ="Enter your first name" id="LastName" formControlName="LastName" required>
+  </div>
+  <div>
+    <label for="Birthdate">Birthday</label>
+    <input type="date" id="Birthdate" formControlName="Birthdate" required>
+  </div>
+  <div>
+    <label for="StudentNum">Student Number</label>
+    <input type="text" placeholder ="Enter your student number" id="StudentNum" formControlName="StudentNum" required>
+  </div>
+
+  <hr>
+
+  <div class="container-button">
+    <div class="text-seperator">
+  <button type="submit">Register<mat-icon>check_circle</mat-icon></button>
+  </div>
+  <a [routerLink]="['/login']"><button type="button" >Go Back<mat-icon>arrow_circle_left</mat-icon></button></a>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
